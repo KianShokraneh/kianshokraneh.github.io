@@ -3,244 +3,505 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kian Shokraneh - CV</title>
+    <title>Kian Shokraneh - Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             color: #333;
+            background-color: #f7f7f7;
         }
-        header {
-            text-align: center;
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .nav-link {
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 15px 20px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #da3409;
+        }
+
+        .navbar-toggler {
+            border-color: #da3409;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(218,52,9, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #e1e1e1;
+            max-width: 1000px;
+            margin: 30px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #da3409;
+            color: #da3409;
+            padding-top: 60px;
+            margin-top: -60px
+        }
+
+        .subsection-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #09afda;
+            display: inline-block;
+        }
+
+        .date {
+            color: #da3409;
+            float: right;
+        }
+
+        .resume-item {
             margin-bottom: 20px;
         }
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
+
+        .resume-item ul {
+            padding-left: 40px;
+            margin-top: 5px;
         }
-        .contact-info {
-            margin-top: 10px;
-        }
-        .contact-info a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        h2 {
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-        .section-content {
-            margin-left: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
+
+        .resume-item ul li {
             margin-bottom: 10px;
         }
-        .two-column {
-            display: flex;
-            flex-wrap: wrap;
+
+        .resume-item .italic {
+            font-style: italic;
         }
-        .two-column div {
-            flex: 1;
-            min-width: 250px;
+
+        .contact-info a {
+            color: #da3409;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .contact-info a:hover {
+            color: #09afda;
+        }
+
+        a.github-link {
+            background-color: #f0e6da;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        a.github-link:hover {
+            color: #09afda;
+        }
+
+        .resume-item a {
+            color: #da3409;
+            text-decoration: none;
+        }
+
+        .resume-item a:hover {
+            color: #09afda;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-top: 5px;
+        }
+
+        .cv-download-link {
+            background-color: #e0f7fa;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #09afda;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .cv-download-link:hover {
+            color: #ffffff;
+            background-color: #09afda;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Kian Shokraneh</h1>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" style=";font-weight: bold; color: #948585" href="#">Kian Shokraneh</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#technical-skills">Technical Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#research-interest">Research Interest</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#work-experience">Work Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#honors-awards">Honors & Awards</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="text-center">
+        <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 25px;">Kian Shokraneh</h1>
         <div class="contact-info">
-            <span><a href="tel:+98-912-867-11-67">+98 912 867 11 67</a></span> |
-            <span><a href="mailto:shokraneh.kian@gmail.com">shokraneh.kian@gmail.com</a></span> |
-            <span><a href="https://www.linkedin.com/in/kian-shokraneh/">LinkedIn</a></span> |
-            <span><a href="https://github.com/KianShokraneh">GitHub</a></span> |
-            <span><a href="https://yourwebsite.com">Website</a></span>
+            <a href="tel:+98-912-867-11-67"><i class="fas fa-phone"></i> +98 912 867 11 67</a>
+            <a href="mailto:shokraneh.kian@gmail.com"><i class="fas fa-envelope"></i> shokraneh.kian@gmail.com</a>
+            <a href="https://www.linkedin.com/in/kian-shokraneh/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/KianShokraneh"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://yourwebsite.com"><i class="fas fa-globe"></i> Website</a>
         </div>
-    </header>
+        <a href="path/to/your/cv.pdf" class="cv-download-link" download>Download CV</a>
 
-    <section>
-        <h2>Education</h2>
-        <div class="section-content">
-            <p><strong>Amirkabir University of Technology (Tehran Polytechnic), Tehran, Iran</strong> | 2020 -- Present</p>
-            <p>Bachelor of Science in Computer Engineering</p>
+    </div>
+
+    <div id="education" class="section-title mt-4">Education</div>
+    <div class="resume-item">
+        <div class="d-flex justify-content-between">
+            <div class="subsection-title">Amirkabir University of Technology, Tehran, Iran</div>
+            <div class="date">2020 - Present</div>
+        </div>
+        <p class="italic" style="margin-bottom: 5px;">Bachelor of Science in Computer Engineering</p>
+        <ul>
+            <li>CGPA: 3.96/4 (18.75/20)</li>
+            <li>GPA over the past two semesters: 4/4 (19.25/20)</li>
+        </ul>
+    </div>
+    <div class="resume-item">
+        <div class="d-flex justify-content-between">
+            <div class="subsection-title">Allameh Tabatabaei Complex of Cultural and Educational, Tehran, Iran</div>
+            <div class="date">2017 - 2020</div>
+        </div>
+        <p class="italic" style="margin-bottom: 5px;">High School Diploma in Mathematics and Physics</p>
+        <ul>
+            <li>CGPA: 4/4 (19.33/20)</li>
+        </ul>
+    </div>
+
+    <div class="section-title mt-4">Relevant Coursework</div>
+    <div class="row">
+        <div class="col-md-6">
             <ul>
-                <li>CGPA: 3.96/4 (18.75/20)</li>
-                <li>GPA over the past two semesters: 4/4 (19.25/20)</li>
-            </ul>
-            <p><strong>Allameh Tabatabaei Complex of Cultural and Educational</strong> | 2017 -- 2020</p>
-            <p>High School Diploma in Mathematics and Physics</p>
-            <ul>
-                <li>CGPA: 4/4 (19.33/20)</li>
+                <li>Artificial Intelligence: 18/20</li>
+                <li>Computational Intelligence: 18/20</li>
+                <li>Data Structures and Algorithms: 20/20</li>
+                <li>Information Retrieval: 18.26/20</li>
             </ul>
         </div>
-    </section>
+        <div class="col-md-6">
+            <ul>
+                <li>Algorithm Design: 20/20</li>
+                <li>Software Testing: 20/20</li>
+                <li>Advanced Programming: 19.1/20</li>
+                <li>Compiler Design: 18.66/20</li>
+            </ul>
+        </div>
+    </div>
 
-    <section>
-        <h2>Relevant Coursework</h2>
-        <div class="two-column">
+    <div id="technical-skills" class="section-title mt-4">Technical Skills</div>
+    <ul>
+        <li><strong>Languages:</strong> Persian (Native), English <span
+                class="italic">(Fluent; TOEFL on Oct 27, 2024)</span></li>
+        <li><strong>Programming Languages:</strong> Python, Java, C, HTML/CSS, JavaScript, SQL</li>
+        <li><strong>Libraries & Frameworks:</strong> PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib, Transformers,
+            Django, Django REST Framework (DRF), Elasticsearch, FAISS
+        </li>
+        <li><strong>Techs and Tools:</strong> Git, Docker, JetBrains IDEs, VS Code, Postman, Amazon S3, Google Colab,
+            Kaggle
+        </li>
+    </ul>
+
+    <div id="research-interest" class="section-title mt-4">Research Interest</div>
+    <ul style="padding-left: 40px;">
+        <li>Computer Vision and Image Processing</li>
+        <li>Natural Language Processing (NLP)</li>
+        <li>Explainable AI and Model Interpretability</li>
+        <li>Trustworthy AI</li>
+    </ul>
+
+    <div class="section-title mt-4">Research Experience</div>
+    <div class="resume-item">
+        <div class="d-flex justify-content-between">
+            <div class="subsection-title">Research Assistant, Okinawa Institute of Science and Technology (Remote)</div>
+            <div class="date">March 2024 - Present</div>
+        </div>
+        <p class="italic" style="margin-bottom: 5px;"><strong>Supervisor:</strong> Mohammad Sabokrou, MLDS Unit</p>
+        <ul>
+            <li>Conduct research aimed at ensuring computer vision models focus on the primary object in images rather
+                than background or irrelevant elements.
+            </li>
+            <li>Develop and implement adversarial approaches to improve the robustness and accuracy of models.</li>
+            <li>Advance methods for creating more reliable and trustworthy machine learning systems.</li>
+        </ul>
+    </div>
+    <div class="resume-item">
+        <div class="d-flex justify-content-between">
+            <div class="subsection-title">Research Assistant, Amirkabir University of Technology</div>
+            <div class="date">March 2024 - Present</div>
+        </div>
+        <p class="italic" style="margin-bottom: 5px;"><strong>Supervisor:</strong> Saeedeh Momtazi, Computer Engineering
+            Department</p>
+        <ul>
+            <li>Exploring RAG and LLMS for Persian question answering.</li>
+            <li>Fine-tuning XLM-RoBERTa on the PQuAD dataset to enhance accuracy and relevance in real-time responses.
+            </li>
+            <li>Developing a hybrid system that combines retrieval-based and generation-based models.</li>
+            <li>Generating optimized indexes to improve retrieval efficiency.</li>
+        </ul>
+    </div>
+
+    <div class="section-title mt-4">Teaching Experience</div>
+    <div class="resume-item">
+        <div class="d-flex justify-content-between">
+            <div class="subsection-title">Teaching Assistant, Amirkabir University of Technology, Tehran, Iran</div>
+        </div>
+        <ul>
+            <li style="position: relative;">
+                <span>Advanced Programming (Java), Instructor: Dr. Fatemeh Ziaeetabar</span>
+                <span class="date" style="position: absolute; right: 0;">Fall 2023</span>
+            </li>
+            <li style="position: relative;">
+                <span>Applied Linear Algebra, Instructor: Dr. Maryam Amirmazlaghani</span>
+                <span class="date" style="position: absolute; right: 0;">Spring 2024</span>
+            </li>
+            <li style="position: relative;">
+                <span>Software Engineering, Instructor: Dr. Faezeh Gohari</span>
+                <span class="date" style="position: absolute; right: 0;">Fall 2024</span>
+            </li>
+            <li style="position: relative;">
+                <span>Software Testing, Instructor: Dr. Faezeh Gohari</span>
+                <span class="date" style="position: absolute; right: 0;">Fall 2024</span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="work-experience" class="section-title mt-4">Work Experience</div>
+    <div class="resume-item">
+        <div class="d-flex justify-content-between">
             <div>
-                <ul>
-                    <li>Artificial Intelligence: 18/20</li>
-                    <li>Computational Intelligence: 18/20</li>
-                    <li>Applied Linear Algebra: 17.6/20</li>
-                    <li>Data Mining: 16.98/20</li>
-                </ul>
+                <div class="subsection-title">Backend Developer, Gozar Team, Tehran, Iran</div>
+                <a href="https://gozarteam.com" class="github-link">Website</a> <a
+                    href="https://www.linkedin.com/company/gozarteam" class="github-link">LinkedIn</a>
             </div>
-            <div>
-                <ul>
-                    <li>Data Structures and Algorithms: 20/20</li>
-                    <li>Information Retrieval: 18.26/20</li>
-                    <li>Advanced Programming: 19.1/20</li>
-                    <li>Algorithm Design: 20/20</li>
-                    <li>Principles of Database Design: 17.25/20</li>
-                    <li>Compiler Design: 18.66/20</li>
-                    <li>Software Testing: 20/20</li>
-                </ul>
-            </div>
+            <div class="date">April 2022 – December 2023</div>
         </div>
-    </section>
+        <ul>
+            <li>Specialized in backend development using Django and Django REST Framework (DRF).</li>
+            <li>Designed project architecture and database schemas.</li>
+            <li>Deployed and managed applications on Linux servers.</li>
+            <li>Collaborated on frontend implementation using HTML, CSS, and Bootstrap as a secondary focus.</li>
+        </ul>
+    </div>
 
-    <section>
-        <h2>Technical Skills</h2>
-        <div class="section-content">
+    <div id="projects" class="section-title mt-4">Projects</div>
+    <div class="resume-item">
+        <div class="subsection-title">Model Robustness and Interpretability Projects</div>
+        <ul>
+            <li style="font-weight: bold;">
+                Regularization and Robustness Evaluation Using SHAP
+                <a href="https://github.com/KianShokraneh/Regularization-and-Robustness-Evaluation-Using-SHAP"
+                   class="github-link" style="font-weight: normal;">GitHub</a>
+            </li>
             <ul>
-                <li><strong>Languages:</strong> Persian (Native), English (Fluent; TOEFL on Oct 27, 2024)</li>
-                <li><strong>Programming Languages:</strong> Python, Java, C, HTML/CSS, JavaScript, SQL</li>
-                <li><strong>Libraries & Frameworks:</strong> PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib, Transformers, Django, Django REST Framework (DRF), Elasticsearch, FAISS</li>
-                <li><strong>Techs and Tools:</strong> Git, Docker, JetBrains IDEs, VS Code, Postman, Amazon S3, Google Colab, Kaggle</li>
+                <li style="font-size: 0.9rem;">Implemented SHAP-based regularization to enhance MNIST model
+                    robustness.
+                </li>
+                <li style="font-size: 0.9rem;">Improved model resilience via FGSM adversarial training.</li>
             </ul>
-        </div>
-    </section>
+            <li style="font-weight: bold;">
+                Captum Attribution Metrics Analysis
+                <a href="https://github.com/KianShokraneh/Captum-Attribution-Metrics-Analysis" class="github-link"
+                   style="font-weight: normal;">GitHub</a>
+            </li>
+            <ul>
+                <li style="font-size: 0.9rem;">Conducted metric-based analysis of attribution methods using Captum on
+                    CIFAR-10.
+                </li>
+                <li style="font-size: 0.9rem;">Evaluated robustness with infidelity and sensitivity metrics.</li>
+            </ul>
+            <li style="font-weight: bold;">
+                Captum Interpretability Demonstrations
+                <a href="https://github.com/KianShokraneh/Captum-Interpretability-Demonstrations" class="github-link"
+                   style="font-weight: normal;">GitHub</a>
+            </li>
+            <ul>
+                <li style="font-size: 0.9rem;">Applied Grad-CAM, Integrated Gradients, and Gradient SHAP to interpret
+                    ResNet18 predictions.
+                </li>
+                <li style="font-size: 0.9rem;">Enhanced model transparency through visual explanations.</li>
+            </ul>
+            <li style="font-weight: bold;">
+                Background Importance Analysis Using Gradient SHAP
+                <a href="https://github.com/KianShokraneh/Background-Importance-Analysis-Using-Gradient-SHAP"
+                   class="github-link" style="font-weight: normal;">GitHub</a>
+            </li>
+            <ul>
+                <li style="font-size: 0.9rem;">Performed Gradient SHAP analysis on ResNet18 to evaluate background
+                    influence on predictions.
+                </li>
+                <li style="font-size: 0.9rem;">Visualized attribution values to highlight decision-making processes.
+                </li>
+            </ul>
+            <li style="font-weight: bold;">
+                Adversarial FGSM Comparisons
+                <a href="https://github.com/KianShokraneh/Adversarial-FGSM-Comparisons" class="github-link"
+                   style="font-weight: normal;">GitHub</a>
+            </li>
+            <ul>
+                <li style="font-size: 0.9rem;">Compared FGSM across multiple adversarial attack libraries on ResNet18
+                    (CIFAR-10).
+                </li>
+                <li style="font-size: 0.9rem;">Analyzed Attack Success Rate (ASR) to assess model robustness.</li>
+            </ul>
+        </ul>
+    </div>
 
-    <section>
-        <h2>Research Experience</h2>
-        <div class="section-content">
-            <p><strong>Research Assistant, Okinawa Institute of Science and Technology (Remote)</strong> | March 2024 -- Present</p>
-            <p><em>Supervisor: Mohammad Sabokrou, MLDS Unit</em></p>
-            <ul>
-                <li>Conduct research aimed at ensuring computer vision models focus on the primary object in images rather than background or irrelevant elements.</li>
-                <li>Develop and implement adversarial approaches to improve the robustness and accuracy of models.</li>
-                <li>Try to advance methods for creating more reliable and trustworthy machine learning systems.</li>
-            </ul>
-            <p><strong>Research Assistant, Amirkabir University of Technology</strong> | March 2024 -- Present</p>
-            <p><em>Supervisor: Saeedeh Momtazi, Computer Engineering Department</em></p>
-            <ul>
-                <li>Exploring RAG and LLMs for Persian question answering.</li>
-                <li>Fine-tuning XLM-RoBERTa on the PQuAD dataset to enhance accuracy and relevance in real-time responses.</li>
-                <li>Developing a hybrid system that combines retrieval-based and generation-based models.</li>
-                <li>Generating optimized indexes to improve retrieval efficiency.</li>
-            </ul>
-        </div>
-    </section>
+    <div class="resume-item">
+        <div class="subsection-title">Information Retrieval System on News</div>
+        <a href="https://github.com/KianShokraneh/InformationRetrieval" class="github-link"
+           style="font-weight: normal;">GitHub</a>
+        <ul>
+            <li style="font-size: 0.9rem;">Developed an advanced information retrieval system with a focus on document
+                indexing, querying, and relevance ranking.
+            </li>
+            <li style="font-size: 0.9rem;">Implemented TF-IDF weighting and vector space models to enhance the precision
+                and recall of document retrieval.
+            </li>
+            <li style="font-size: 0.9rem;">Optimized search algorithms and relevance feedback mechanisms to improve
+                retrieval effectiveness and user satisfaction.
+            </li>
+        </ul>
+    </div>
 
-    <section>
-        <h2>Teaching Experience</h2>
-        <div class="section-content">
-            <p><strong>Teaching Assistant, Amirkabir University of Technology, Tehran, Iran</strong></p>
-            <ul>
-                <li>Advanced Programming (Java), Instructor: Dr. Fatemeh Ziaeetabar | <em>Fall 2023</em></li>
-                <li>Applied Linear Algebra, Instructor: Dr. Maryam Amirmazlaghani | <em>Spring 2024</em></li>
-                <li>Software Engineering, Instructor: Dr. Faezeh Gohari | <em>Fall 2024</em></li>
-                <li>Software Testing, Instructor: Dr. Faezeh Gohari | <em>Fall 2024</em></li>
-            </ul>
-        </div>
-    </section>
+    <div class="resume-item">
+        <div class="subsection-title">Fuzzy Self-Driving Car Simulator</div>
+        <a href="https://github.com/KianShokraneh/FuzzySelfDrivingCarSimulator" class="github-link"
+           style="font-weight: normal;">GitHub</a>
+        <ul>
+            <li style="font-size: 0.9rem;">Implemented a fuzzy logic system for simulating self-driving car
+                decision-making in various conditions.
+            </li>
+            <li style="font-size: 0.9rem;">Developed and optimized fuzzy rules for obstacle avoidance and speed
+                control.
+            </li>
+        </ul>
+    </div>
 
-    <section>
-        <h2>Work Experience</h2>
-        <div class="section-content">
-            <p><strong>Backend Developer</strong> | April 2022 -- December 2023</p>
-            <p><em>Gozar Team | <a href="https://gozarteam.com">Website</a> | <a href="https://www.linkedin.com/company/gozarteam">LinkedIn</a></em></p>
-            <ul>
-                <li>Specialized in backend development using Django and Django REST Framework (DRF).</li>
-                <li>Designed project architecture and database schemas.</li>
-                <li>Deployed and managed applications on Linux servers.</li>
-                <li>Collaborated on frontend implementation using HTML, CSS, and Bootstrap as a secondary focus.</li>
-            </ul>
-        </div>
-    </section>
+    <div class="resume-item">
+        <div class="subsection-title">Super Mario AI</div>
+        <a href="https://github.com/KianShokraneh/SuperMarioUsingEvolutionaryAlgorithms" class="github-link"
+           style="font-weight: normal;">GitHub</a>
+        <ul>
+            <li style="font-size: 0.9rem;">Developed AI using Genetic Algorithms to optimize Super Mario’s behavior and
+                strategy.
+            </li>
+            <li style="font-size: 0.9rem;">Evolved neural network parameters for improved navigation of complex
+                levels.
+            </li>
+            <li style="font-size: 0.9rem;">Implemented fitness functions to enhance adaptation and performance.</li>
+        </ul>
+    </div>
 
-    <section>
-        <h2>Projects</h2>
-        <div class="section-content">
-            <h3>Model Robustness and Interpretability Projects</h3>
-            <ul>
-                <li><strong>Regularization and Robustness Evaluation Using SHAP</strong> | <a href="https://github.com/KianShokraneh/Regularization-and-Robustness-Evaluation-Using-SHAP">GitHub</a></li>
-                <ul>
-                    <li>Implemented SHAP-based regularization to enhance MNIST model robustness.</li>
-                    <li>Improved model resilience via FGSM adversarial training.</li>
-                </ul>
-                <li><strong>Captum Attribution Metrics Analysis</strong> | <a href="https://github.com/KianShokraneh/Captum-Attribution-Metrics-Analysis">GitHub</a></li>
-                <```html
-                <ul>
-                    <li>Conducted metric-based analysis of attribution methods using Captum on CIFAR-10.</li>
-                    <li>Evaluated robustness with infidelity and sensitivity metrics.</li>
-                </ul>
-                <li><strong>Captum Interpretability Demonstrations</strong> | <a href="https://github.com/KianShokraneh/Captum-Interpretability-Demonstrations">GitHub</a></li>
-                <ul>
-                    <li>Applied Grad-CAM, Integrated Gradients, and Gradient SHAP to interpret ResNet18 predictions.</li>
-                    <li>Enhanced model transparency through visual explanations.</li>
-                </ul>
-                <li><strong>Background Importance Analysis Using Gradient SHAP</strong> | <a href="https://github.com/KianShokraneh/Background-Importance-Analysis-Using-Gradient-SHAP">GitHub</a></li>
-                <ul>
-                    <li>Performed Gradient SHAP analysis on ResNet18 to evaluate background influence on predictions.</li>
-                    <li>Visualized attribution values to highlight decision-making processes.</li>
-                </ul>
-                <li><strong>Adversarial FGSM Comparisons</strong> | <a href="https://github.com/KianShokraneh/Adversarial-FGSM-Comparisons">GitHub</a></li>
-                <ul>
-                    <li>Compared FGSM across multiple adversarial attack libraries on ResNet18 (CIFAR-10).</li>
-                    <li>Analyzed Attack Success Rate (ASR) to assess model robustness.</li>
-                </ul>
-            </ul>
-            <h3>Other Projects</h3>
-            <ul>
-                <li><strong>Information Retrieval System on News</strong> | <a href="https://github.com/KianShokraneh/InformationRetrieval">GitHub</a></li>
-                <ul>
-                    <li>Developed an advanced information retrieval system with a focus on document indexing, querying, and relevance ranking.</li>
-                    <li>Implemented TF-IDF weighting and vector space models to enhance the precision and recall of document retrieval.</li>
-                    <li>Optimized search algorithms and relevance feedback mechanisms to improve retrieval effectiveness and user satisfaction.</li>
-                </ul>
-                <li><strong>Fuzzy Self-Driving Car Simulator</strong> | <a href="https://github.com/KianShokraneh/FuzzySelfDrivingCarSimulator">GitHub</a></li>
-                <ul>
-                    <li>Implemented a fuzzy logic system for simulating self-driving car decision-making in various conditions.</li>
-                    <li>Developed and optimized fuzzy rules for obstacle avoidance and speed control.</li>
-                </ul>
-                <li><strong>Super Mario AI</strong> | <a href="https://github.com/KianShokraneh/SuperMarioUsingEvolutionaryAlgorithms">GitHub</a></li>
-                <ul>
-                    <li>Developed AI using Genetic Algorithms to optimize Super Mario’s behavior and strategy.</li>
-                    <li>Evolved neural network parameters for improved navigation of complex levels.</li>
-                    <li>Implemented fitness functions to enhance adaptation and performance.</li>
-                </ul>
-                <li><strong>Pac-Man AI</strong> | <a href="https://github.com/KianShokraneh/Pacman">GitHub</a></li>
-                <ul>
-                    <li>CS 188 Pac-Man AI Projects at UC Berkeley, applying advanced AI algorithms in a gaming context.</li>
-                    <li>Implemented A*, DFS, and BFS for optimized Pac-Man navigation.</li>
-                    <li>Applied Expectimax and Minimax algorithms for adversarial agent development.</li>
-                    <li>Integrated reinforcement learning to enhance adaptability and performance.</li>
-                </ul>
-            </ul>
-        </div>
-    </section>
+    <div class="resume-item">
+        <div class="subsection-title">Pac-Man AI</div>
+        <a href="https://github.com/KianShokraneh/Pacman" class="github-link" style="font-weight: normal;">GitHub</a>
+        <ul>
+            <li style="font-size: 0.9rem;">CS 188 Pac-Man AI Projects at UC Berkeley, applying advanced AI algorithms in
+                a gaming context.
+            </li>
+            <li style="font-size: 0.9rem;">Implemented A*, DFS, and BFS for optimized Pac-Man navigation.</li>
+            <li style="font-size: 0.9rem;">Applied Expectimax and Minimax algorithms for adversarial agent
+                development.
+            </li>
+            <li style="font-size: 0.9rem;">Integrated reinforcement learning to enhance adaptability and performance.
+            </li>
+        </ul>
+    </div>
 
-    <section>
-        <h2>Honors & Awards</h2>
-        <div class="section-content">
-            <ul>
-                <li>Ranked 189th in the nationwide university entrance exam (Konkour), placing in the top 1% among more than 155,000 participants.</li>
-            </ul>
-        </div>
-    </section>
+    <div id="honors-awards" class="section-title mt-4">Honors & Awards</div>
+    <ul>
+        <li>Ranked 189th in the nationwide university entrance exam <span class="italic">(Konkour)</span>, placing in
+            the top 1% among more than 155,000 participants.
+        </li>
+    </ul>
 
+</div>
+<div class="text-center mt-4">
+    <p id="last-updated" style=" color: #09afda;">Last Updated: September 3, 2024</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function () {
+            if (window.innerWidth < 992) {
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                if (navbarToggler.getAttribute('aria-expanded') === 'true') {
+                    navbarToggler.click();
+                }
+            }
+        });
+    });
+
+ document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+
+        let offset;
+        if (window.innerWidth >= 992) {
+            offset = 40;
+        } else {
+            offset = 350;
+        }
+
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = target.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+}
+);
+</script>
 </body>
 </html>
